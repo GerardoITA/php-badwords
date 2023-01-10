@@ -3,6 +3,9 @@
     $censorword = $_GET["badword"];
     $censor = "***";
     $censoredtext = str_replace($censorword, $censor, $text);
+    $lgt = strlen($text);
+    $safelgt = strlen($censoredtext);
+
 
     
 ?>
@@ -24,6 +27,7 @@
     <p>
     <?php
     echo $censoredtext
+    echo $safelgt
     ?>
     </p>
     
